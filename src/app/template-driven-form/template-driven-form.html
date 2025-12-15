@@ -1,0 +1,62 @@
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+
+  <!-- Text Input -->
+  <label>
+    Name:
+    <input
+      type="text"
+      name="name"
+      [(ngModel)]="formData.name"
+      required
+    >
+  </label>
+
+  <br><br>
+
+  <!-- Radio Buttons -->
+  <label>
+    <input
+      type="radio"
+      name="gender"
+      value="male"
+      [(ngModel)]="formData.gender"
+      required
+    >
+    Male
+  </label>
+
+  <label>
+    <input
+      type="radio"
+      name="gender"
+      value="female"
+      [(ngModel)]="formData.gender"
+    >
+    Female
+  </label>
+
+  <br><br>
+
+  <!-- Checkbox -->
+  <label>
+    <input
+      type="checkbox"
+      name="acceptTerms"
+      [(ngModel)]="formData.acceptTerms"
+    >
+    Accept Terms
+  </label>
+
+  <br><br>
+
+  <button type="submit" [disabled]="myForm.invalid">
+    Submit
+  </button>
+
+  <ul>
+    <li>Name: {{formData.name}}</li>
+    <li>Gender: {{formData.gender}}</li>
+    <li>Accept Terms: {{formData.acceptTerms}}</li>
+  </ul>
+
+</form>
