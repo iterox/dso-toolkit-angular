@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import {
+  DsoToolkitModule
+} from '@dso-toolkit/angular';
 
 @Component({
   selector: 'app-template-driven-form',
   imports: [
-    FormsModule
+    FormsModule,
+    DsoToolkitModule,
   ],
   templateUrl: './template-driven-form.html',
   styleUrl: './template-driven-form.scss',
@@ -20,5 +24,8 @@ export class TemplateDrivenForm {
     console.log(form.value);
   }
 
-  protected readonly Object = Object;
+  handleChange(e: CustomEvent){
+    console.log(e.detail.checked);
+    this.formData.acceptTerms = e.detail.checked;
+  };
 }

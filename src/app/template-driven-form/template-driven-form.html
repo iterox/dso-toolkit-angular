@@ -49,14 +49,24 @@
 
   <br><br>
 
+
+  <dso-selectable
+    type="checkbox"
+    identifier="55f9e515-41b9-4339-a22f-c5c5603a7572"
+    (dsoChange)="handleChange($event)"
+    [checked]="formData.acceptTerms"
+    [value]="'waarde'">Label</dso-selectable>
+
   <button type="submit" [disabled]="myForm.invalid">
     Submit
   </button>
 
-  <ul>
-    <li>Name: {{formData.name}}</li>
-    <li>Gender: {{formData.gender}}</li>
-    <li>Accept Terms: {{formData.acceptTerms}}</li>
-  </ul>
-
 </form>
+
+
+
+<ul>
+  <li>Name: {{formData.name}}</li>
+  <li>Gender: {{formData.gender}}</li>
+  <li>Accept Terms: {{formData.acceptTerms}}</li>
+</ul>
