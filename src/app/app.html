@@ -232,8 +232,10 @@
       </svg>
       <h1>Hello, {{ title() }}</h1>
       <p>Congratulations! Your app is running. 🎉</p>
-      <br><br>
+
       <app-template-driven-form></app-template-driven-form>
+
+      <app-failing-build [naam]="'123'" [roleAlert]="false"></app-failing-build>
     </div>
 
     <div class="divider" role="separator" aria-label="Divider"></div>

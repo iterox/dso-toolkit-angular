@@ -30,7 +30,11 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              {
+                "input": "./node_modules/dso-toolkit/dist/dso.min.css",
+                "inject": true
+              }
             ]
           },
           "configurations": {
